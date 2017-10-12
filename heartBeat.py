@@ -12,15 +12,15 @@ ax1.tick_params(labelsize=16)
 
 ### Data load
 ## See specific data files in data/ folder
-dat = np.loadtxt('data/n1rr.txt',usecols=0)
-dat = dat[:100] # pick up first 100 points
+#dat = np.loadtxt('data/n1rr.txt',usecols=0)
+#dat = dat[:100] # pick up first 100 points
 ## Ice data
-# dat = np.loadtxt('data/ice.csv',usecols=0,delimiter=';',comments=';')
+dat = np.loadtxt('data/ice.csv',usecols=0,delimiter=';',comments=';')
 ## sauna/ice-swimming change point + convert to sec
-# dat = dat[55085:55185] * 0.001
+dat = dat[55085:55185] * 0.001
 ## Specific intervals of the ice-data
-## dat[53900:53950] -- ice-swimming
-## dat[54725:54775] -- sauna
+#dat = dat[53860:53960] * 0.001 ## -- ice-swimming
+#dat = dat[53500:53600] * 0.001 ## -- sauna
 ## Fake data
 # dat = 0.1*np.ones((1,10))
 # dat = np.concatenate((1.0*np.ones((1,10)),dat),axis=0)
@@ -48,7 +48,7 @@ def init():
     imgplot = ax.imshow(imgB,animated=True)
     ax.axis('off')
     ### Wait addition 5 sec to get screen recording software ready
-    #ani.event_source.interval = 5000
+    ani.event_source.interval = 5000
     return imgplot,ln
 
 def update(frame):
