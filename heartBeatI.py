@@ -12,12 +12,12 @@ ax1.tick_params(labelsize=16)
 
 ### Data load
 ## See specific data files in data/ folder
-dat = np.loadtxt('data/n1rr.txt',usecols=0)
-dat = dat[:100] # pick up first 100 points
+# dat = np.loadtxt('data/c1rr.txt',usecols=0)
+# dat = dat[:100] # pick up first 100 points
 ## Ice data
-# dat = np.loadtxt('data/ice.csv',usecols=0,delimiter=';',comments=';')
+dat = np.loadtxt('data/ice.csv',usecols=0,delimiter=';',comments=';')
 ## sauna/ice-swimming change point + convert to sec
-# dat = dat[55085:55185] * 0.001
+dat = dat[55085:55185] * 0.001
 ## Specific intervals of the ice-data
 ## dat[53900:53950] -- ice-swimming
 ## dat[54725:54775] -- sauna

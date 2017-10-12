@@ -12,7 +12,7 @@ ax1.tick_params(labelsize=16)
 
 ### Data load
 ## See specific data files in data/ folder
-dat = np.loadtxt('data/n1rr.txt',usecols=0)
+dat = np.loadtxt('data/a1rr.txt',usecols=0)
 dat = dat[:100] # pick up first 100 points
 ## Ice data
 # dat = np.loadtxt('data/ice.csv',usecols=0,delimiter=';',comments=';')
